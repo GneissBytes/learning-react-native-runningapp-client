@@ -53,7 +53,7 @@ const tryLocalSignin = dispatch => async () => {
 const logout = dispatch => async () => {
     await AsyncStorage.clear()
     dispatch({ type: 'LOGOUT' })
-    navigate('loginFlow')
+    navigate('LoadingScreen')
 }
 
 const clearAuthError = dispatch => () => dispatch({ type: "CLEAR_AUTH_ERROR" })

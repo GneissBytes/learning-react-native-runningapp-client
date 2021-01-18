@@ -37,7 +37,7 @@ const AuthForm = ({ title, buttonTitle, errorMessage, onSubmit }) => {
                     android_ripple={false}
                     title={buttonTitle}
                     type="outline"
-                    containerStyle={{ marginHorizontal: 150 }}
+                    containerStyle={{ marginHorizontal: 50 }}
                     onPress={() => onSubmit({ email, password })} />
             </Spacer>
         </View>
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     },
     errorContainer: {
         alignSelf: 'center',
-        height: 10,
+        height: 30,
         marginBottom: 15
     }
 })

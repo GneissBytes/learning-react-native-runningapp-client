@@ -1,5 +1,5 @@
-import React, { useContext, useEffect } from 'react';
-import { View, StyleSheet } from 'react-native';
+import React, { useContext } from 'react';
+import { View, StyleSheet, SafeAreaView } from 'react-native';
 import { NavigationEvents } from 'react-navigation'
 
 import { Context } from '../context/AuthContext'
@@ -11,23 +11,25 @@ const SigninScreen = () => {
 
 
     return (
-        <View style={styles.container}>
-            <NavigationEvents onWillFocus={clearAuthError}/>
-            <AuthForm
-                title="Sign In to RunTracker"
-                buttonTitle="Sign in"
-                errorMessage={errorMessage}
-                onSubmit={signin} />
-            <NavLink
-                target="Signup"
-                label="Not registered? Click to sign up." />
-        </View>
+        <SafeAreaView forceInset={{ top: 'always' }}>
+            <View style={styles.container}>
+                <NavigationEvents onWillFocus={clearAuthError} />
+                <AuthForm
+                    title="Sign In to RunTracker"
+                    buttonTitle="Sign in"
+                    errorMessage={errorMessage}
+                    onSubmit={signin} />
+                <NavLink
+                    target="Signup"
+                    label="Not registered? Click to sign up." />
+            </View>
+        </SafeAreaView>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex: 0.6,
+        marginTop: 30,
         justifyContent: 'center',
     }
 })
