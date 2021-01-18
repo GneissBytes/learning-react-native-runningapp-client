@@ -46,7 +46,7 @@ const TrackDetailScreen = ({ navigation: { getParam } }) => {
                             bottom: 10,
                             left: 10
                         }, animated: false
-                    })}   >
+                    })}>
 
 
                 <Polyline
@@ -54,9 +54,11 @@ const TrackDetailScreen = ({ navigation: { getParam } }) => {
             </MapView>
             <Button
                 title="Remove this track"
-                buttonStyle={{ backgroundColor: 'red',
-                 marginHorizontal: 30,
-                 marginTop: 25 }}
+                buttonStyle={{
+                    backgroundColor: 'red',
+                    marginHorizontal: 30,
+                    marginTop: 25
+                }}
                 onPress={() => deleteTrack(track._id)} />
 
         </>)
