@@ -23,7 +23,14 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.gneissbytes.runtracker",
+      "config":{
+        "googleMaps": {
+          "apiKey": "AIzaSyBQy_H68AerfnNZugbLyeV7bANIUuKKwvE"
+        }
       }
+      
     },
     "web": {
       "favicon": "./assets/favicon.png"
